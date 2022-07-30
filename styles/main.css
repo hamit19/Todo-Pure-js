@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #6d28d9;
+  --secondary-color: #ede9fe;
+  --main-white: #fff;
+  --main-black: #222;
+  --main-gray: #7c7c7c;
+  --main-transition: all 0.3s linear;
+  --main-red: #db2777;
+  --body-color: #f6f6f6;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-shadow: border-box;
+  list-style: none;
+}
+
+body {
+  font-size: 65.33%;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--body-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+input,
+select,
+textarea {
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  padding: 2rem 1rem;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+.form-container {
+  width: 40rem;
+  display: flex;
+  align-items: center;
+}
+
+.form-container form {
+  width: 25rem;
+  position: relative;
+}
+
+form input {
+  width: 20rem;
+  height: 100%;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ede9fe;
+  border-radius: 0.2rem 0 0 0.2rem;
+  transition: var(--main-transition);
+  outline: none;
+  border-right: none;
+}
+
+form input:focus {
+  border: 1px solid var(--primary-color);
+  border-right: none;
+  box-shadow: 1px 1px 5px rgba(203, 203, 203, 0.5);
+}
+
+form button {
+  position: absolute;
+  padding: 0.7rem;
+  height: 100%;
+  border: 1px solid #ede9fe;
+  border-left: none;
+  outline: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  border-radius: 0 0.2rem 0.2rem 0;
+  background-color: #fff;
+  transition: var(--main-transition);
+}
+
+form input:focus ~ button {
+  border: 1px solid var(--primary-color);
+  border-left: none;
+  box-shadow: 4px 1px 5px rgba(203, 203, 203, 0.5);
+}
+
+.select select {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ede9fe;
+  padding: 0.5rem 0.2rem;
+  border-radius: 0.2rem;
+  outline: none;
+  transition: var(--main-transition);
+}
+
+.select select:focus {
+  border: 1px solid var(--primary-color);
+  box-shadow: 1px 1px 5px rgba(203, 203, 203, 0.5);
+}
+
+.todo-container {
+  width: 25rem;
+  padding: 0.8rem 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-container ul .todo {
+  width: 93%;
+  background: #ece1ff;
+  padding: 1rem 0.5rem;
+  border-radius: 0.2rem;
+  color: var(--primary-color);
+  display: grid;
+  font-size: 0.8rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0.7rem 0;
+}
+
+.todo-container ul .todo.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.todo-container ul .todo span {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+.actions span i {
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.actions span:first-child {
+  color: var(--main-red) !important;
+}

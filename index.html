@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script
+      src="https://kit.fontawesome.com/519a83532f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Todo list</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="page-header">Todo list</h1>
+    </header>
+
+    <main class="main-content">
+      <!-- form wrapper -->
+      <div class="form-container">
+        <!-- adding form todo -->
+        <form>
+          <input
+            class="todo-input"
+            type="text"
+            placeholder="Set your todo..."
+          />
+          <button class="add-todo" class="btn" type="submit">
+            <i class="fa fa-plus-circle"></i>
+          </button>
+        </form>
+        <!-- select wrapper -->
+        <div class="select">
+          <select class="filter-todos" onchange="filterTodoLists(event)">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="unCompleted">UnCompleted</option>
+          </select>
+        </div>
+      </div>
+      <!-- _todoList wrapper -->
+      <div class="todo-container">
+        <ul class="todo-list-ul"></ul>
+      </div>
+    </main>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
